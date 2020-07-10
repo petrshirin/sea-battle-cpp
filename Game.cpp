@@ -265,11 +265,11 @@ void Game::start_game() {
 					std::cout << "Выбрана неверная клетка" << std::endl;
 				}
 				else if (is_select == 2) {
-					file << turn << ':' << step << '\n';
+					file << current_field << '-' << turn << ':' << step << '\n';
 					continue;
 				}
 				else {
-					file << turn << ':' << step << '\n';
+					file << current_field << '-' << turn << ':' << step << '\n';
 					change_turn();
 					change_current_field();
 				}
@@ -281,11 +281,11 @@ void Game::start_game() {
 					std::cout << "Выбрана неверная клетка" << std::endl;
 				}
 				else if (is_select == 2) {
-					file << turn << ':' << step << '\n';
+					file << current_field << '-' << turn << ':' << step << '\n';
 					continue;
 				}
 				else {
-					file << turn << ':' << step << '\n';
+					file << current_field << '-' << turn << ':' << step << '\n';
 					change_turn();
 					change_current_field();
 				}
