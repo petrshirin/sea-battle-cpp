@@ -305,6 +305,7 @@ void Game::change_current_field() {
 	system("cls");
 	while (true)
 	{
+		std::cout << "Игрок " << turn << std::endl;
 		std::cout << "Вы хотите поменять поле для игры (Текущее поле: " << current_field << ", Максимальный номер поля: " << count_fields - 1 << ")" << std::endl;
 		std::cout << "Введите 1 - да или 2 - нет: ";
 		std::cin >> answer;
