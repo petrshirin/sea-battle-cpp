@@ -6,8 +6,8 @@
 class Game
 {
 private:
-	Field field_1 = Field();
-	Field field_2 = Field();
+	Field field_1[10];
+	Field field_2[10];
 	int winner = 0;
 	std::map<char, int> table_simv = {
 		{'A', 0},
@@ -21,8 +21,10 @@ private:
 		{'I', 8},
 		{'J', 9}
 	};
-	void fill_player_field(Field field);
+	void fill_player_field();
 	int choice_turn();
+	int count_fields = 1;
+	int current_field = 0;
 	bool validate_cell(std::string cell);
 	bool validate_cells_position(std::vector<std::string> &cells, int count_cells);
 	void fill_ship(int count_cells, int count_ships);
@@ -38,9 +40,12 @@ public:
 	void print_current_field();
 	void print_all_fields();
 	std::string optimal_turn();
+
+	void change_current_field();
 	
 	Game();
 	Game(int _turn);
+	Game(int _turn, int count_fields);
 	~Game();
 
 };

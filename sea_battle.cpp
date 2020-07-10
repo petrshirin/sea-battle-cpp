@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "Russian");
-	Game g = Game();
+	Game g = Game(1, 2);
 	g.preload_game();
 	g.start_game();
 
